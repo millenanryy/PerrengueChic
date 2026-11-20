@@ -19,7 +19,7 @@ groups.innerHTML = sections.map(([title, count, price], group) => {
     const code = `PC-${group + 1}${String(index + 1).padStart(2, '0')}`;
     const src = `assets/peca-${id}.webp`;
     items.set(id, {title, code, src, price});
-    return `<button class="card" type="button" data-id="${id}" aria-label="Ver brinco ${code}, ${currency.format(price)}"><img src="${src}" alt="Brinco ${code}" width="396" height="444" loading="lazy"><span class="card-meta"><span class="product-name">Brinco <small>${code}</small></span><span class="tag">${currency.format(price)}</span></span></button>`;
+    return `<button class="card" type="button" data-id="${id}" aria-label="Ver brinco ${code}, ${currency.format(price)}"><span class="card-photo"><img src="${src}" alt="" width="396" height="444" loading="lazy"></span><span class="card-meta"><span class="product-name">Ver detalhes</span><span class="tag">${currency.format(price)}</span></span></button>`;
   }).join('');
   return `<section class="group" data-group="${group}"><h3>${title}</h3><div class="grid">${cards}</div></section>`;
 }).join('');
